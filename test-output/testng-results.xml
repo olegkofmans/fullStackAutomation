@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" total="1" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="65034" started-at="2019-07-04T07:04:56Z" finished-at="2019-07-04T07:06:01Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="65034" started-at="2019-07-04T07:04:56Z" finished-at="2019-07-04T07:06:01Z">
+      <class name="Test.imBD">
+        <test-method status="PASS" signature="StartSession()[pri:0, instance:Test.imBD@1794d431]" name="StartSession" is-config="true" duration-ms="43855" started-at="2019-07-04T10:04:56Z" finished-at="2019-07-04T10:05:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StartSession -->
+        <test-method status="FAIL" signature="test01()[pri:0, instance:Test.imBD@1794d431]" name="test01" duration-ms="20208" started-at="2019-07-04T10:05:39Z" finished-at="2019-07-04T10:06:00Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Fail asserted]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Fail asserted
+	at org.testng.Assert.fail(Assert.java:94)
+	at Extensions.verify.textInElement(verify.java:28)
+	at Test.imBD.test01(imBD.java:34)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test01 -->
+        <test-method status="PASS" signature="closeSession()[pri:0, instance:Test.imBD@1794d431]" name="closeSession" is-config="true" duration-ms="942" started-at="2019-07-04T10:06:00Z" finished-at="2019-07-04T10:06:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeSession -->
+      </class> <!-- Test.imBD -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
