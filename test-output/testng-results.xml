@@ -2,25 +2,36 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="65034" started-at="2019-07-04T07:04:56Z" finished-at="2019-07-04T07:06:01Z">
+  <suite name="Default suite" duration-ms="9810" started-at="2019-07-14T13:22:59Z" finished-at="2019-07-14T13:23:09Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="65034" started-at="2019-07-04T07:04:56Z" finished-at="2019-07-04T07:06:01Z">
-      <class name="Test.imBD">
-        <test-method status="PASS" signature="StartSession()[pri:0, instance:Test.imBD@1794d431]" name="StartSession" is-config="true" duration-ms="43855" started-at="2019-07-04T10:04:56Z" finished-at="2019-07-04T10:05:39Z">
+    <test name="Default test" duration-ms="9810" started-at="2019-07-14T13:22:59Z" finished-at="2019-07-14T13:23:09Z">
+      <class name="Test.IMBD01">
+        <test-method status="PASS" signature="StartSession()[pri:0, instance:Test.IMBD01@29774679]" name="StartSession" is-config="true" duration-ms="6086" started-at="2019-07-14T16:22:59Z" finished-at="2019-07-14T16:23:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StartSession -->
-        <test-method status="FAIL" signature="test01()[pri:0, instance:Test.imBD@1794d431]" name="test01" duration-ms="20208" started-at="2019-07-04T10:05:39Z" finished-at="2019-07-04T10:06:00Z">
+        <test-method status="PASS" signature="doBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:Test.IMBD01@29774679]" name="doBeforeTestMethod" is-config="true" duration-ms="4" started-at="2019-07-14T16:23:05Z" finished-at="2019-07-14T16:23:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void Test.IMBD01.test01_searchValue() throws java.io.IOException,javax.xml.parsers.ParserConfigurationException,org.xml.sax.SAXException,org.sikuli.script.FindFailed]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doBeforeTestMethod -->
+        <test-method status="FAIL" signature="test01_searchValue()[pri:0, instance:Test.IMBD01@29774679]" name="test01_searchValue" duration-ms="2955" started-at="2019-07-14T16:23:05Z" finished-at="2019-07-14T16:23:08Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Fail asserted]]>
+              <![CDATA[Fail to Find Image]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Fail asserted
+              <![CDATA[java.lang.AssertionError: Fail to Find Image
 	at org.testng.Assert.fail(Assert.java:94)
-	at Extensions.verify.textInElement(verify.java:28)
-	at Test.imBD.test01(imBD.java:34)
+	at Extensions.verify.image(verify.java:48)
+	at Test.IMBD01.test01_searchValue(IMBD01.java:19)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -50,12 +61,16 @@
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test01 -->
-        <test-method status="PASS" signature="closeSession()[pri:0, instance:Test.imBD@1794d431]" name="closeSession" is-config="true" duration-ms="942" started-at="2019-07-04T10:06:00Z" finished-at="2019-07-04T10:06:01Z">
+        </test-method> <!-- test01_searchValue -->
+        <test-method status="PASS" signature="doAfterTest()[pri:0, instance:Test.IMBD01@29774679]" name="doAfterTest" is-config="true" duration-ms="1" started-at="2019-07-14T16:23:08Z" finished-at="2019-07-14T16:23:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doAfterTest -->
+        <test-method status="PASS" signature="closeSession()[pri:0, instance:Test.IMBD01@29774679]" name="closeSession" is-config="true" duration-ms="750" started-at="2019-07-14T16:23:08Z" finished-at="2019-07-14T16:23:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeSession -->
-      </class> <!-- Test.imBD -->
+      </class> <!-- Test.IMBD01 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

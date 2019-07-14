@@ -3,13 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Test.imBD">
+      <class name="Test.IMBD01">
         <methods>
-          <include name="test01"/>
-          <include name="closeSession"/>
+          <include name="doAfterTest"/>
           <include name="StartSession"/>
+          <include name="test01_searchValue"/>
+          <include name="closeSession"/>
+          <include name="doBeforeTestMethod"/>
         </methods>
-      </class> <!-- Test.imBD -->
+      </class> <!-- Test.IMBD01 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

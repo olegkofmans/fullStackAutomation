@@ -3,30 +3,51 @@ package Extensions;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.fail;
 
+import java.io.IOException;
+
+import javax.xml.parsers.ParserConfigurationException;
+
 import org.openqa.selenium.WebElement;
+import org.sikuli.script.FindFailed;
+import org.xml.sax.SAXException;
 
-public class verify {
+import com.relevantcodes.extentreports.LogStatus;
 
-	public static void textInElement(WebElement elm, String textexpected) {
+import Utilities.commonOps;
+
+public class verify extends commonOps {
+
+	public static void textInElement(WebElement elm, String textExpected) throws IOException, ParserConfigurationException, SAXException {
 
 		try 
 		{
 
-			assertEquals(elm.getText(), textexpected);	
-
-			System.out.println("The Result asserted");		
+			assertEquals(elm.getText(), textExpected);	
+			test.log(LogStatus.PASS, "The result of expected text are asserted");
 
 		} 
 		catch (Exception e) 
 		{
-			System.out.println("Fail asserted: " + e);	
-			fail("Fail asserted");
+			test.log(LogStatus.FAIL, "The result of expected text are fail to asserted because: " + test.addScreenCapture(takeSS()));
+			fail("Fail Exeption");
 		}
 		catch (AssertionError e) 
 		{
-			System.out.println("Fail asserted: " + e);
-			fail("Fail asserted");
+			test.log(LogStatus.FAIL, "The result of expected text are fail to asserted because: " + "See Screenshots: " + test.addScreenCapture(takeSS()));
+			fail("Fail Asserted");
+			
 		}
+	}
+	public static void image(String imagePath) throws FindFailed, IOException, ParserConfigurationException, SAXException {
+		try {
+			screen.find(imagePath);
+			
+		} 
+		catch (Exception e) {
+			test.log(LogStatus.FAIL, "Fail to Find Image: " + test.addScreenCapture(takeSS()));
+			fail("Fail to Find Image");		
+			}
+		
 	}
 
 }

@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Enviroment>
+<Configuration>
+
+<!-- URL -->
 <URL>https://www.imdb.com/</URL>
-<Chromepath>C:\\Automation\\libs\\chromedriver.exe</Chromepath>
-</Enviroment>
+
+<!-- Web -->
+<BrowserType>Chrome</BrowserType>
+
+<ChromeDriverPath>./Drivers/chromedriver.exe</ChromeDriverPath>
+<FFDriverPath>./Drivers/chromedriver.exe</FFDriverPath>
+<IEDriverPath>./Drivers/chromedriver.exe</IEDriverPath>
+
+<!-- Reports -->>
+
+<ReportFilePath>D:/Automation/Reports/</ReportFilePath>
+<ReportFileName>TestExecution</ReportFileName>
+
+
+
+
+</Configuration>
