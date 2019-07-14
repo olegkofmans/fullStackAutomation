@@ -1,1 +1,3 @@
-# fullStackCourse - The Project be ready soon
+# IMBD - Full Automation Architecture
+fullStack Project:
+Library: Selenium,Sikuli,TestNG,ExtentReport
