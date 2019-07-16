@@ -2,6 +2,8 @@ package Utilities;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Method;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import javax.xml.parsers.DocumentBuilder;
@@ -21,6 +23,10 @@ import org.testng.annotations.BeforeMethod;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 import com.relevantcodes.extentreports.ExtentReports;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.AndroidMobileCapabilityType;
+import io.appium.java_client.remote.MobileCapabilityType;
+
 
 public class commonOps extends base {
 
@@ -58,6 +64,14 @@ public class commonOps extends base {
 		System.setProperty("webdriver.gecko.driver", getData("FFDriverPath"));
 		WebDriver driver = new FirefoxDriver();
 		return driver;
+	}
+	public static void initMobile() throws MalformedURLException {
+		dc.setCapability(MobileCapabilityType.UDID, "12ea4d55");
+        dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.shivgadhia.android.ukMortgageCalc");
+        dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".MainActivity");
+        driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), dc);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        
 	}
 
 	public static void instanceReport() throws ParserConfigurationException, SAXException, IOException {
@@ -97,8 +111,13 @@ public class commonOps extends base {
 	}
 	@BeforeClass
 	public void StartSession() throws ParserConfigurationException, SAXException, IOException {
-
+        if(getData("AutomationType").toLowerCase().equals("web")) 
 		initBrowser(getData("BrowserType"));
+        
+        else if (getData("AutomationType").toLowerCase().equals("mobile")) {
+			initMobile();
+		}
+        
 		managePages.init();
 		instanceReport();
 
@@ -117,5 +136,6 @@ public class commonOps extends base {
 	public void doAfterTest() {
 		finilizeReportTest();
 	} 
+	
 	
 }

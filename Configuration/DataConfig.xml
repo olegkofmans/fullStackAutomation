@@ -2,6 +2,10 @@
 
 <Configuration>
 
+
+<!-- Web / Mobile / API / Desktop / Electron -->
+<AutomationType>Web</AutomationType> 
+
 <!-- URL -->
 <URL>https://www.imdb.com/</URL>
 

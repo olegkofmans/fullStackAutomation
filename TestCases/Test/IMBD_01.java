@@ -8,7 +8,7 @@ import Extensions.verify;
 import Utilities.commonOps;
 import WorkFlows.web_search;
 
-public class IMBD01 extends commonOps{
+public class IMBD_01 extends commonOps{
 
 
 	@Test
