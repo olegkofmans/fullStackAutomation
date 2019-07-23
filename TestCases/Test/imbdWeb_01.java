@@ -8,9 +8,7 @@ import Extensions.verify;
 import Utilities.commonOps;
 import WorkFlows.web_search;
 
-public class IMBD_01 extends commonOps{
-
-
+public class imbdWeb_01 extends commonOps{
 	@Test
 	public void test01_searchValue() throws IOException, ParserConfigurationException, SAXException, FindFailed {
 		web_search.go("The Lion King");

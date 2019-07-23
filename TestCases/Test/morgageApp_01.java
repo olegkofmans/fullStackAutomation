@@ -9,7 +9,7 @@ import Extensions.verify;
 import Utilities.commonOps;
 import WorkFlows.mobile_mortgage;
 
-public class MorgageApp_01 extends commonOps{
+public class morgageApp_01 extends commonOps{
 
 	@Test
 	public void test01_verifyRepayment() throws IOException, ParserConfigurationException, SAXException, FindFailed {

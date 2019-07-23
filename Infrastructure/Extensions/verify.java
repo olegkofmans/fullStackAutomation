@@ -1,20 +1,16 @@
 package Extensions;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 import static org.testng.Assert.fail;
-
 import java.io.IOException;
-
 import javax.xml.parsers.ParserConfigurationException;
-
 import org.openqa.selenium.WebElement;
 import org.sikuli.script.FindFailed;
 import org.xml.sax.SAXException;
 
 import com.relevantcodes.extentreports.LogStatus;
-
 import Utilities.commonOps;
-
 public class verify extends commonOps {
 
 	public static void textInElement(WebElement elm, String textExpected) throws IOException, ParserConfigurationException, SAXException {
@@ -49,5 +45,16 @@ public class verify extends commonOps {
 			}
 		
 	}
+	
+	public static void containsAPI(String response, String text) {
+		try {
+		assertTrue(response.contains(text));
+		test.log(LogStatus.PASS, "Assert response is passed");
+	}
+		catch (AssertionError e) {
+			test.log(LogStatus.FAIL, "Fail to verify text in the JSON" + e);
+			fail("fail to verify text in the JSON" + e);		
+		}
+		}
 
 }

@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Test.IMBD_01">
+      <class name="Test.studentsAPI_01">
         <methods>
-          <include name="test01_searchValue"/>
           <include name="doAfterTest"/>
           <include name="StartSession"/>
           <include name="closeSession"/>
+          <include name="test01_verifyStudentCreated"/>
           <include name="doBeforeTestMethod"/>
         </methods>
-      </class> <!-- Test.IMBD_01 -->
+      </class> <!-- Test.studentsAPI_01 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

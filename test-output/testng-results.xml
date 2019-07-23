@@ -2,39 +2,39 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11213" started-at="2019-07-16T09:37:21Z" finished-at="2019-07-16T09:37:32Z">
+  <suite name="Default suite" duration-ms="1107" started-at="2019-07-23T09:29:53Z" finished-at="2019-07-23T09:29:54Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="11213" started-at="2019-07-16T09:37:21Z" finished-at="2019-07-16T09:37:32Z">
-      <class name="Test.IMBD_01">
-        <test-method status="PASS" signature="StartSession()[pri:0, instance:Test.IMBD_01@4e1d422d]" name="StartSession" is-config="true" duration-ms="7151" started-at="2019-07-16T12:37:21Z" finished-at="2019-07-16T12:37:28Z">
+    <test name="Default test" duration-ms="1107" started-at="2019-07-23T09:29:53Z" finished-at="2019-07-23T09:29:54Z">
+      <class name="Test.studentsAPI_01">
+        <test-method status="PASS" signature="StartSession()[pri:0, instance:Test.studentsAPI_01@3cef309d]" name="StartSession" is-config="true" duration-ms="370" started-at="2019-07-23T12:29:53Z" finished-at="2019-07-23T12:29:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StartSession -->
-        <test-method status="PASS" signature="doBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:Test.IMBD_01@4e1d422d]" name="doBeforeTestMethod" is-config="true" duration-ms="2" started-at="2019-07-16T12:37:28Z" finished-at="2019-07-16T12:37:28Z">
+        <test-method status="PASS" signature="doBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:Test.studentsAPI_01@3cef309d]" name="doBeforeTestMethod" is-config="true" duration-ms="2" started-at="2019-07-23T12:29:54Z" finished-at="2019-07-23T12:29:54Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void Test.IMBD_01.test01_searchValue() throws java.io.IOException,javax.xml.parsers.ParserConfigurationException,org.xml.sax.SAXException,org.sikuli.script.FindFailed]]>
+                <![CDATA[public void Test.studentsAPI_01.test01_verifyStudentCreated() throws javax.xml.parsers.ParserConfigurationException,org.xml.sax.SAXException,java.io.IOException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doBeforeTestMethod -->
-        <test-method status="PASS" signature="test01_searchValue()[pri:0, instance:Test.IMBD_01@4e1d422d]" name="test01_searchValue" duration-ms="3198" started-at="2019-07-16T12:37:28Z" finished-at="2019-07-16T12:37:31Z">
+        <test-method status="PASS" signature="test01_verifyStudentCreated()[pri:0, instance:Test.studentsAPI_01@3cef309d]" name="test01_verifyStudentCreated" duration-ms="586" started-at="2019-07-23T12:29:54Z" finished-at="2019-07-23T12:29:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test01_searchValue -->
-        <test-method status="PASS" signature="doAfterTest()[pri:0, instance:Test.IMBD_01@4e1d422d]" name="doAfterTest" is-config="true" duration-ms="1" started-at="2019-07-16T12:37:31Z" finished-at="2019-07-16T12:37:31Z">
+        </test-method> <!-- test01_verifyStudentCreated -->
+        <test-method status="PASS" signature="doAfterTest()[pri:0, instance:Test.studentsAPI_01@3cef309d]" name="doAfterTest" is-config="true" duration-ms="1" started-at="2019-07-23T12:29:54Z" finished-at="2019-07-23T12:29:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doAfterTest -->
-        <test-method status="PASS" signature="closeSession()[pri:0, instance:Test.IMBD_01@4e1d422d]" name="closeSession" is-config="true" duration-ms="851" started-at="2019-07-16T12:37:31Z" finished-at="2019-07-16T12:37:32Z">
+        <test-method status="PASS" signature="closeSession()[pri:0, instance:Test.studentsAPI_01@3cef309d]" name="closeSession" is-config="true" duration-ms="138" started-at="2019-07-23T12:29:54Z" finished-at="2019-07-23T12:29:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeSession -->
-      </class> <!-- Test.IMBD_01 -->
+      </class> <!-- Test.studentsAPI_01 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

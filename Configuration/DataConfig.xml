@@ -2,26 +2,32 @@
 
 <Configuration>
 
-
 <!-- Web / Mobile / API / Desktop / Electron -->
-<AutomationType>Web</AutomationType> 
+<AutomationType>API</AutomationType> 
 
 <!-- URL -->
 <URL>https://www.imdb.com/</URL>
 
 <!-- Web -->
 <BrowserType>Chrome</BrowserType>
-
 <ChromeDriverPath>./Drivers/chromedriver.exe</ChromeDriverPath>
 <FFDriverPath>./Drivers/chromedriver.exe</FFDriverPath>
 <IEDriverPath>./Drivers/chromedriver.exe</IEDriverPath>
 
-<!-- Reports -->>
+<!-- Mobile -->
+<UDID>12ea4d55</UDID>
+<APP_Package>com.shivgadhia.android.ukMortgageCalc</APP_Package>
+<APP_Activity>.MainActivity</APP_Activity>
+<Appium_Server_Adress>http://localhost:4723/wd/hub</Appium_Server_Adress>
 
+<!-- API -->
+<API_URL>http://localhost:9000/</API_URL>
+<API_Resource>student</API_Resource>
+
+
+
+<!-- Reports -->>
 <ReportFilePath>D:/Automation/Reports/</ReportFilePath>
 <ReportFileName>TestExecution</ReportFileName>
-
-
-
 
 </Configuration>

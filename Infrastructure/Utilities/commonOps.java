@@ -10,6 +10,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import org.apache.commons.io.FileUtils;
+import org.apache.http.HttpRequest;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -26,6 +27,7 @@ import com.relevantcodes.extentreports.ExtentReports;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
+import io.restassured.RestAssured;
 
 
 public class commonOps extends base {
@@ -65,13 +67,16 @@ public class commonOps extends base {
 		WebDriver driver = new FirefoxDriver();
 		return driver;
 	}
-	public static void initMobile() throws MalformedURLException {
-		dc.setCapability(MobileCapabilityType.UDID, "12ea4d55");
-        dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.shivgadhia.android.ukMortgageCalc");
-        dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".MainActivity");
-        driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), dc);
+	public static void initMobile() throws ParserConfigurationException, SAXException, IOException {
+		dc.setCapability(MobileCapabilityType.UDID, getData("UDID"));
+        dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, getData("APP_Package"));
+        dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, getData("APP_Activity"));
+        driver = new AndroidDriver<>(new URL(getData("Appium_Server_Adress")), dc);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        
+	}
+	public static void initAPI() throws ParserConfigurationException, SAXException, IOException {
+		RestAssured.baseURI = getData("API_URL");
+		httpRequest = RestAssured.given();
 	}
 
 	public static void instanceReport() throws ParserConfigurationException, SAXException, IOException {
@@ -116,6 +121,9 @@ public class commonOps extends base {
         
         else if (getData("AutomationType").toLowerCase().equals("mobile")) {
 			initMobile();
+		}  
+        else if (getData("AutomationType").toLowerCase().equals("api")) {
+			initAPI();
 		}
         
 		managePages.init();
@@ -123,8 +131,9 @@ public class commonOps extends base {
 
 	} 
 	@AfterClass
-	public void closeSession() {
-		driver.quit();	
+	public void closeSession() throws ParserConfigurationException, SAXException, IOException {
+		if(!getData("AutomationType").equals("API"))
+		    driver.quit();	
 		finilizeExtentReport();
 	} 
 	
