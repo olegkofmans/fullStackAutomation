@@ -1,3 +1,3 @@
 # IMBD - Full Automation Architecture
 fullStack Project:
-Library: Selenium,Sikuli,TestNG,ExtentReport
+Library: Selenium,Sikuli,TestNG,ExtentReport,RESTAssured
